@@ -1,9 +1,7 @@
 <template>
     <div class="container">
       <!-- {{db_data}} -->
-      <button type="button" class="btn btn-primary" v-on:click="load_db()">
-        Load
-      </button>
+
       <br />
       <br />
       <div id="all_top_5" v-if="display">
@@ -365,9 +363,9 @@ export default {
   
   data() {
     return {
-      db_data: {},
+
       countires: ["india", "brazil", "china", "russia", "south africa"],
-      list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+
       limiter: [0, 1, 2, 3, 4],
       upper_limit: 11,
       lower_limit: 0,
@@ -393,13 +391,7 @@ export default {
         russia: {},
         "south africa": {},
       },
-      countires_list_updated: {
-        india: {},
-        brazil: {},
-        china: {},
-        russia: {},
-        "south africa": {},
-      },
+
       count: 0,
       india_dates: [
         "20140101",
@@ -441,7 +433,7 @@ export default {
       ],
     };
   },
-  created() {},
+  created() {this.load_db()},
   updated() {},
   methods: {
     load_db() {
@@ -449,60 +441,53 @@ export default {
       this.countires.forEach((country) => {
         db.ref("/osm_data/analyzed/" + country + "/top_5/data")
           .once("value", (snap) => {
-            // console.log(country);
-            this.countires_list[country] = snap.val();
-            // console.log(this.countires_list[country]);
-            // snap.val().forEach(snap_val=>{
-            //   // this.categories.forEach(category=>{
-            //   //   console.log(snap_val[category]);
 
-            //   // })
-            //   console.log(snap_val['office']);
-            // })
+            this.countires_list[country] = snap.val();
+            
           })
-          .then((res) => {
-            this.count++;
-            this.update_status();
-            // console.log("this is done");
-          });
+          // .then((res) => {
+          //   this.count++;
+          //   this.update_status();
+          //   // console.log("this is done");
+          // });
       });
     },
-    update_status() {
-      if (this.count == 5) {
-        console.log("Update Done");
-        this.countires.forEach((country, index) => {
-          // console.log(ele+' '+index  );
-          let i = 0;
-          this.categories.forEach((category, _index) => {
-            // console.log(country+' '+category);
+    // update_status() {
+    //   if (this.count == 5) {
+    //     console.log("Update Done");
+    //     this.countires.forEach((country, index) => {
+    //       // console.log(ele+' '+index  );
+    //       let i = 0;
+    //       this.categories.forEach((category, _index) => {
+    //         // console.log(country+' '+category);
 
-            // console.log(this.countires_list[country][i][category]);
-            if (country == "brazil" && category != "advertising") {
-              this.india_dates.forEach((date, index) => {
-                console.log(country + " " + category + " " + date);
-                // console.log(this.countires_list[country][i][category]);
-                console.log(
-                  this.countires_list[country][i][category][date]["frequency"]
-                );
-                console.log(
-                  this.countires_list[country][i][category][date]["tag_name"]
-                );
-              });
-            }
-            i++;
-          });
-        });
+    //         // console.log(this.countires_list[country][i][category]);
+    //         if (country == "brazil" && category != "advertising") {
+    //           this.india_dates.forEach((date, index) => {
+    //             console.log(country + " " + category + " " + date);
+    //             // console.log(this.countires_list[country][i][category]);
+    //             console.log(
+    //               this.countires_list[country][i][category][date]["frequency"]
+    //             );
+    //             console.log(
+    //               this.countires_list[country][i][category][date]["tag_name"]
+    //             );
+    //           });
+    //         }
+    //         i++;
+    //       });
+    //     });
 
-        // this.countires_list.forEach((element,index) => {
-        //   let i = 0;
-        //   console.log(index);
-        //   // this.categories.forEach((category,_index) => {
-        //   //   console.log(element[i][category]);
-        //   //   i++;
-        //   // });
-        // });
-      }
-    },
+    //     // this.countires_list.forEach((element,index) => {
+    //     //   let i = 0;
+    //     //   console.log(index);
+    //     //   // this.categories.forEach((category,_index) => {
+    //     //   //   console.log(element[i][category]);
+    //     //   //   i++;
+    //     //   // });
+    //     // });
+    //   }
+    // },
   },
 };
 </script>
