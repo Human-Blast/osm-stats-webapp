@@ -1,25 +1,19 @@
-# Open Street Map BRICS Nations Analysis
+# osm-test-site
 
-## Instructions for serving a local copy
+## Project setup
 ```
 npm install
+```
+
+### Compiles and hot-reloads for development
+```
 npm run serve
 ```
-### Firebase Config
 
-  FirebaseConfig.js file containing all the api keys isn;t currently in the repo for security and internal testing purpose.
-  You can add your own api keys by creating a file in src/ 'firebaseconfig.js' and having the following code
-  
-  ```js
-  export default {
-    apiKey: "API Key",
-    authDomain: "Auth Domain",
-    databaseURL: "DB URL",
-    projectId: "Project Id",
-    storageBucket: "Storage Bucket",
-    appId: "App Id"
-};
-  ```
+### Compiles and minifies for production
+```
+npm run build
+```
 
-
-
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
