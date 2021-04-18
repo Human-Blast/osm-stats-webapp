@@ -1,61 +1,55 @@
 <template>
-  <div style="margin-left:50px">
-
+  <div style="margin-left: 50px">
     <br />
     <br />
     <div id="all_top_5" v-if="display">
       <!-- <div id="accordion"> -->
       <div v-for="country in countires" :key="country.index">
         <div v-if="country == 'india'">
-
-
           <span v-show="false"> {{ (i = 0) }} </span>
 
-<div class="card-group">
-          <div v-for="category in categories" :key="category.index">
-            <!-- <h3>{{ category }}</h3> -->
-            
-            <div v-if="category != 'advertising'">
-              <div v-for="date in india_dates" :key="date.index">
-                <!-- <h4>{{ date }}</h4> -->
-                
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">{{ category }}</h4>
-                    <h5 class="card-subtitle mb-2 text-muted"> {{date}} </h5>
-                    <p class="card-text">
+          <div class="card-group">
+            <div v-for="category in categories" :key="category.index">
+              <!-- <h3>{{ category }}</h3> -->
+
+              <div v-if="category != 'advertising'">
+                <div v-for="date in india_dates" :key="date.index">
+                  <!-- <h4>{{ date }}</h4> -->
+
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ category }}</h4>
+                      <h5 class="card-subtitle mb-2 text-muted">{{ date }}</h5>
+
                       <table class="table">
-                  <thead class="bg-dark text-white">
-                    <th>Tag Name</th>
-                    <th>Frequency</th>
-                  </thead>
+                        <thead class="bg-dark text-white">
+                          <th>Tag Name</th>
+                          <th>Frequency</th>
+                        </thead>
 
-                  <tbody v-for="j in limiter" :key="j.index">
-                    <tr>
-                      <td>
-                        {{
-                          countires_list[country][i][category][date][
-                            "tag_name"
-                          ][j]
-                        }}
-                      </td>
-                      <td>
-                        {{
-                          countires_list[country][i][category][date][
-                            "frequency"
-                          ][j]
-                        }}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                    </p>
-
+                        <tbody v-for="j in limiter" :key="j.index">
+                          <tr>
+                            <td>
+                              {{
+                                countires_list[country][i][category][date][
+                                  "tag_name"
+                                ][j]
+                              }}
+                            </td>
+                            <td>
+                              {{
+                                countires_list[country][i][category][date][
+                                  "frequency"
+                                ][j]
+                              }}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                </div>
 
-                
-                <!-- <table class="table">
+                  <!-- <table class="table">
                   <thead class="bg-dark text-white">
                     <th>Tag Name</th>
                     <th>Frequency</th>
@@ -80,13 +74,11 @@
                     </tr>
                   </tbody>
                 </table> -->
+                </div>
               </div>
+              <span v-show="false">{{ i++ }}</span>
+              <!-- <span v-show="false"> {{ i++ }} </span> -->
             </div>
-            <span v-show="false">{{ i++ }}</span>
-            <!-- <span v-show="false"> {{ i++ }} </span> -->
-
-            </div>
-
           </div>
         </div>
       </div>

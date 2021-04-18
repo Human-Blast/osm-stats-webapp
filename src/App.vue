@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <br>
-    <h1> BRICS NATION OPEN STREET MAP ANALYSIS</h1>
+    <h1> BRICS NATIONS OPEN STREET MAP DATA  ANALYSIS</h1>
     <div id="nav">
       <router-link to="/">ALL TOP 5</router-link> |
       <router-link to="/india">India</router-link> |
