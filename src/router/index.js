@@ -7,7 +7,7 @@ import SouthAfrica from '../components/southafrica.vue'
 import Russia from '../components/russia.vue'
 import Brazil from '../components/brazil.vue'
 import China from '../components/china.vue'
-
+import Test from '../components/test.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -20,6 +20,11 @@ const routes = [
     path: '/',
     name: 'osm',
     component: OSM
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: Test
   },
   {
     path: '/india',

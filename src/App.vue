@@ -8,7 +8,8 @@
       <router-link to="/southafrica">South Africa</router-link> |
       <router-link to="/china">China</router-link> |
       <router-link to="/russia">Russia</router-link> |
-      <router-link to="/brazil">Brazil</router-link> |  
+      <router-link to="/brazil">Brazil</router-link> |
+      <router-link to="/test">Sandbox</router-link>   
     </div>
     <router-view/>
     
