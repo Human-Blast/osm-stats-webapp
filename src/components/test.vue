@@ -1,6 +1,10 @@
 <template>
   <div style="margin-left: 50px">
     <br />
+    <button type="button" class="btn btn-danger" v-on:click="onDownload()">
+      Download Full JSON File
+    </button>
+    <br>
     <br />
     <div id="all_top_5" v-if="display">
       <!-- <div id="accordion"> -->
@@ -95,7 +99,7 @@
 
 <script>
 import db from "../firebaseinit";
-import firebase from "firebase";
+// import firebase from "firebase";
 
 export default {
   data() {
@@ -150,6 +154,18 @@ export default {
           }
         );
       });
+    },
+
+    onDownload() {
+      //  download(JSON.stringify(countires_list), "Test.json", "text/plain");
+      let content = JSON.stringify(this.countires_list);
+      let fileName = "Test.json";
+      let contentType = "text/plain";
+      const a = document.createElement("a");
+      const file = new Blob([content], { type: contentType });
+      a.href = URL.createObjectURL(file);
+      a.download = fileName;
+      a.click();
     },
   },
 };

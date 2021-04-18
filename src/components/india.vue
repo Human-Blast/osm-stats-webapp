@@ -64,7 +64,7 @@
 
 <script>
 import db from "../firebaseinit";
-import firebase from "firebase";
+// import firebase from "firebase";
 
 export default {
   data() {
