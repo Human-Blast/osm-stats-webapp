@@ -16,7 +16,6 @@ jobs:
           envkey_VUE_APP_FIREBASE_TOKEN: ${{ secrets.FIREBASE_API_KEY }}
           envkey_VUE_APP_FIREBASE_DB_URL: ${{ secrets.FIREBASE_DB_URL }}
           envkey_VUE_APP_FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-          file_name: .env.production
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Install Dependencies
