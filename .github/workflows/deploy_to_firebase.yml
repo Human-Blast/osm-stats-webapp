@@ -13,6 +13,11 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
+        env:
+        CI: true
+        API_KEY: ${{secrets.FIREBASE_TOKEN}}
+        DB_URL: ${{secrets.FIREBASE_DB_URL}}
+        PROJECT_ID: ${{secrets.FIREBASE_PROJECT_ID}}
       - name: Build
         run: npm run build
       - name: Archive Production Artifact
