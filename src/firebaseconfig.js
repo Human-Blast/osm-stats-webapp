@@ -1,7 +1,7 @@
-console.log(process.env.VUE_APP_FIREBASE_DB_URL);
+// console.log(process.env.VUE_APP_FIREBASE_DB_URL);
 export default {
-    apiKey: process.env.VUE_APP_FIREBASE_TOKEN,
-    databaseURL: process.env.VUE_APP_FIREBASE_DB_URL,
-    projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+    apiKey: "AIzaSyBTzzXFHncci7RanGMjNfduJ8_471RkYoU",
+    databaseURL:"https://open-street-map-research-default-rtdb.firebaseio.com",
+    projectId: "open-street-map-research",
 
 };
