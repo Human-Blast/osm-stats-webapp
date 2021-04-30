@@ -8,6 +8,7 @@ import Russia from '../components/russia.vue'
 import Brazil from '../components/brazil.vue'
 import China from '../components/china.vue'
 import Test from '../components/test.vue'
+import CSV from '../components/CSV_Download.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -25,6 +26,11 @@ const routes = [
     path: '/test',
     name: 'test',
     component: Test
+  },
+  {
+    path: '/csv',
+    name: 'csv',
+    component: CSV
   },
   {
     path: '/india',
