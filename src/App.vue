@@ -9,13 +9,24 @@
       <router-link to="/china">China</router-link> |
       <router-link to="/russia">Russia</router-link> |
       <router-link to="/brazil">Brazil</router-link> |
-      <router-link to="/test">Sandbox</router-link>   
+      <router-link to="/csv">Graph Checker</router-link>   
     </div>
-    <router-view/>
+    <div class="container">
+      <router-view/>
+    </div>
+    
     
   </div>
 </template>
-
+<script>
+import Vue from "vue";
+import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
+export default {
+  
+}
+</script>
 
 
 <style>
