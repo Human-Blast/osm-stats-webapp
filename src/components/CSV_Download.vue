@@ -87,7 +87,7 @@ export default {
         this.load=true
         this.show=false
       axios
-        .get(this.api_url + "/api/pygraph/"+this.country_sel+"/" + this.category_sel)
+        .get(this.api_url + "/osmapi/pygraph/"+this.country_sel+"/" + this.category_sel)
         .then((res) => {
           // console.log(res);
           // this.countires_list[country]["img"] = "data:image/png;base64, " + res.data;
