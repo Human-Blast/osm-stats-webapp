@@ -6,7 +6,7 @@
     <button type="button" class="btn btn-danger" v-on:click="onDownload()">
       Download Full JSON File
     </button>
-    <br>
+    <br />
     <br />
     <div id="all_top_5" v-if="display">
       <div id="accordion">
@@ -320,7 +320,7 @@
             </div>
           </div>
 
-          <div v-if="country == 'south africa'">
+          <div v-if="country == 'southafrica'">
             <!-- <h2>{{ country }}</h2> -->
 
             <div class="card">
@@ -412,7 +412,7 @@ import db from "../firebaseinit";
 export default {
   data() {
     return {
-      countires: ["india", "brazil", "china", "russia", "south africa"],
+      countires: ["india", "brazil", "china", "russia", "southafrica"],
 
       limiter: [0, 1, 2, 3, 4],
       upper_limit: 11,
@@ -437,7 +437,7 @@ export default {
         brazil: {},
         china: {},
         russia: {},
-        "south africa": {},
+        southafrica: {},
       },
 
       count: 0,

@@ -4,7 +4,7 @@
     <br />
     <div id="all_top_5" v-if="display">
       <div v-for="country in countires" :key="country.index">
-        <div v-if="country == 'south africa'">
+        <div v-if="country == 'southafrica'">
           <span v-show="false"> {{ (i = 0) }} </span>
           <div class="card-group">
             <div v-for="category in categories" :key="category.index">
@@ -64,7 +64,7 @@ export default {
   data() {
     return {
       db_data: {},
-      countires: ["south africa"],
+      countires: ["southafrica"],
 
       limiter: [0, 1, 2, 3, 4],
       upper_limit: 11,
@@ -85,7 +85,7 @@ export default {
         "boundary",
       ],
       countires_list: {
-        "south africa": {},
+        "southafrica": {},
       },
 
       count: 0,

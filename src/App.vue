@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <br>
-    <h1> BRICS NATIONS OPEN STREET MAP DATA  ANALYSIS</h1>
+    <br />
+    <h1>BRICS NATIONS OPEN STREET MAP DATA ANALYSIS</h1>
     <div id="nav">
       <router-link to="/">ALL TOP 5</router-link> |
       <router-link to="/india">India</router-link> |
@@ -9,13 +9,11 @@
       <router-link to="/china">China</router-link> |
       <router-link to="/russia">Russia</router-link> |
       <router-link to="/brazil">Brazil</router-link> |
-      <router-link to="/csv">Graph Checker</router-link>   
+      <router-link to="/csv">Graph Checker</router-link>
     </div>
     <div class="container">
-      <router-view/>
+      <router-view />
     </div>
-    
-    
   </div>
 </template>
 <script>
@@ -23,9 +21,7 @@ import Vue from "vue";
 import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
-export default {
-  
-}
+export default {};
 </script>
 
 
